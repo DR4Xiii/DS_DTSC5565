@@ -1,0 +1,146 @@
+/* Base Styles & Typography */
+:root {
+    --bg-color: #0f172a;
+    --text-color: #cbd5e1;
+    --heading-color: #f8fafc;
+    --accent-color: #38bdf8;
+    --card-bg: #1e293b;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: var(--card-bg);
+    padding: 4rem 0;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header h1 span {
+    color: var(--accent-color);
+    font-weight: 300;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+/* Main Layout */
+main {
+    padding: 3rem 0;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--card-bg);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.bio p {
+    font-size: 1.1rem;
+    max-width: 800px;
+}
+
+/* Skills section (Grid Layout) */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+}
+
+/* Contact Section */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #7dd3fc;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--card-bg);
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* Responsive adjustments for Desktop */
+@media (min-width: 768px) {
+    .grid-layout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    header {
+        text-align: left;
+        padding: 5rem 0;
+    }
+}
